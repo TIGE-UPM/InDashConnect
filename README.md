@@ -1,5 +1,7 @@
 # WAFED Moodle Webs Service plugin for Moodle 3.X
 
+Moodle Connector plugin for InDash, forked from https://github.com/ugGit/moodle_ws_la_trace_exporter.
+
 This plugin is necessary to allow the export of course specific activity log data to the Graasp Learning Analytics App.
 The plugin essentially exposes 2 web services:
 
