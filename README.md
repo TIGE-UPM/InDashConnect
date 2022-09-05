@@ -1,7 +1,5 @@
 # WAFED Moodle Webs Service plugin for Moodle 3.X
 
-Moodle Connector plugin for InDash, forked from https://github.com/ugGit/moodle_ws_la_trace_exporter.
-
 This plugin is necessary to allow the export of course specific activity log data to the Graasp Learning Analytics App.
 The plugin essentially exposes 2 web services:
 
@@ -19,7 +17,7 @@ As the plugin works with web services, they have to be enabled in your Moodle in
 
 1. Access Site administration > Advanced features
 2. Check 'Enable web services' then click 'Save Changes'
-3. Access Site administration > Plugins > Web services > Manage protocols
+3. Access Site administration > Plugins > Web services > Manage protocols (for Moodle 3.11+  Site administration > Server > Web services > Manage protocols)
 4. Enable the REST protocol
 
 Additionally, you must equip the users with some extended capabilities:
@@ -40,7 +38,7 @@ Now, you're ready to install the plugin. Therefore, choose one of the below appr
 ### Installing Manually at the Server (recommended)
 1. Login to your webserver
 2. Navigate to /path/to/moodle/local/
-3. Clone this github project into the folder by executing: `git clone https://gitlab.forge.hefr.ch/uchendu.nwachukw/wafed_moodle_webservice_plugin.git`
+3. Clone this github project into the folder by executing: `git clone https://github.com/ugGit/moodle_ws_la_trace_exporter.git`
 4. In your browser, login to your Moodle as admin.
 5. You should be notified, that additional plugins are ready to be installed. Confirm the database upgrade.
 
@@ -63,7 +61,7 @@ It's important to note that the authenticated user should be **enrolled as Teach
 
 `[POST] {{yourMoodleUrl}}/login/token.php?username={{yourUsername}}&password={{yourPassword}}&service=wafed_webservices`
 
-You should receive a response containing a `token`, which will be used in the next requests identify the user securely. E.g.:
+You should receive a response containing a `token`, which will be used in the next requests to identify the user securely. E.g.:
 ```
 {
     "token": "a7eb3737b6b61e33991217305e8c5e59",
